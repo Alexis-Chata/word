@@ -18,14 +18,16 @@ class WordController extends Controller
         $imagenword = $request->input('imagenword');
         $marcaaguaword = $request->input('marcaaguaword');
 
-        $section->addImage($imagenword);
-        $section->addText($description);
-
         $header = $section->addHeader();
-        $header->addWatermark($marcaaguaword, [
-            'marginTop'=>200,
-            "width" => 450,
-        ]);
+        $header->addWatermark(asset('/storage/Sintulo-1.png'), array(
+            'width' => 452,
+            'height' => 734,
+        ));
+        $section->addText($description);
+        //$section->addImage($imagenword);
+
+        $section = $phpWord->addSection();
+
 
         $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
         try {
