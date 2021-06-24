@@ -15,7 +15,8 @@ use App\Http\Controllers\WordController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect(route('generarword'));
 });
-Route::view('generar-docx', 'generar-docx');
-Route::post('descargar-docx', [WordController::class,'descargarDocx'])->name('descargar');
+Route::view('generar-docx', 'generar-docx')->name('generarword');
+Route::post('descargar-docx', [WordController::class,'descargarDocx'])->name('descargarword');

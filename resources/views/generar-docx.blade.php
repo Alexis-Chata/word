@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Generar-Docx</title>
+    <style>
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        input{
+            width: 580px
+        }
+        body{
+            padding-left: 10px
+        }
+    </style>
 </head>
 <body>
-    <form action="{{ route('descargar') }}" method="post">
+    <form action="{{ route('descargarword') }}" method="post">
         <br>
-        <label for="">Marca Agua Word</label>
-        <input type="text" name="marcaaguaword" id="" value="http://itsolutionstuff.com/frontTheme/images/logo.png" style="width: 400px;">
-        <br>
-        <br>
-        <label for="">Imagen Word</label>
-        <input type="text" name="imagenword" id="" value="http://itsolutionstuff.com/frontTheme/images/logo.png" style="width: 400px;">
+        <label for="imagenword">Imagen Word:</label>
+        <input type="text" name="imagenword" id="imagenword" value="http://itsolutionstuff.com/frontTheme/images/logo.png">
         <br>
         <br>
-        <label for="">Texto Word</label>
-        <textarea name="textoword" id="" cols="80" rows="10">
+        <label for="textoword">Texto Word:</label>
+        <textarea name="textoword" id="textoword" cols="80" rows="10">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
